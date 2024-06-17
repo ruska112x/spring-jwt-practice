@@ -1,0 +1,41 @@
+@font-face {
+  src: url("../public/fonts");
+  font-family: url("../public/fonts");
+  font-display: swap;
+}
+
+:root {
+  --font-family: Roboto, sans-serif;
+  --base-font: 400 2rem var(--font-family);
+  --color-primary-main: #06f;
+  --color-primary-light: #e6f0ff;
+  --color-primary-light-active: #c0d9ff;
+  --color-sign-in: #cba321;
+  --color-sign-up: #abc123;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  display: block;
+}

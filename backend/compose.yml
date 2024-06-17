@@ -1,0 +1,23 @@
+services:
+  app:
+    build: .
+    depends_on:
+      postgres:
+        condition: service_started
+    ports:
+      - 8080:8080
+    networks:
+      - app-network
+
+  postgres:
+    image: postgres:15
+    ports:
+      - 5432:5432
+    env_file:
+      - .env
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

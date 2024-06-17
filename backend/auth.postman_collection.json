@@ -1,0 +1,73 @@
+{
+  "info": {
+    "_postman_id": "df403a7e-a7f7-4d85-9977-5a0cc5c076be",
+    "name": "auth",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+    "_exporter_id": "33112181"
+  },
+  "item": [
+    {
+      "name": "sign-up",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"email\": \"user@example.com\",\n    \"password\": \"password\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "localhost:8080/auth/sign-up"
+      },
+      "response": []
+    },
+    {
+      "name": "sign-in",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"email\": \"user@example.com\",\n    \"password\": \"password\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "localhost:8080/auth/sign-in"
+      },
+      "response": []
+    },
+    {
+      "name": "example",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJydXNsYW4ua2FyYWJhbGluIiwiaWF0IjoxNzE3NTg1Nzc3LCJzdWIiOiJ1c2VyQGV4YW1wbGUuY29tIiwiZXhwIjoxNzE3NTg3NTc3LCJyb2xlcyI6WyJVU0VSIl19.yuBNJke796Pt4sOYnT_FZnrfvkypa98_7C6LQFvAGfimQfMtnZzZraOGFPz6BZn79BXM_FUqXDom4IoRTx9Ltg",
+            "uuid": "cb46fa30-d8a1-4c4f-a7e6-3d327ebb5c15"
+          }
+        ],
+        "url": "localhost:8080/example"
+      },
+      "response": []
+    },
+    {
+      "name": "refresh",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": "localhost:8080/auth/refresh"
+      },
+      "response": []
+    }
+  ]
+}

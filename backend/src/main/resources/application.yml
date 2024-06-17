@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: backend
+  datasource:
+    postgre:
+      driver: org.postgresql.Driver
+      jdbcUrl: jdbc:postgresql://postgres:5432/auth_database
+      username: authuser
+      password: password
+  mail:
+    host:
+    port:
+    username:
+    password:
+
+logging:
+  level:
+    root: INFO
+
+jwt:
+  issuer: 'ruslan.karabalin'
+  signingKey: 'talspoc120nxabcpqke1d77'
+  aTokenDuration: 30
+  rTokenDuration: 60
